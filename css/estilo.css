@@ -313,6 +313,7 @@ footer a{/*ajustes de los enlaces del pie de página; color, peso (falseado), el
     .galeria{/*la galería del portfolio muestra sólo 1 imagen por línea en mayor tamaño para mejorar su visibilidad en móvil*/
         grid-template-columns: repeat(1, auto);
         gap: 15px;
+        margin: auto;
     }
     .about p,
     .ref p,
@@ -320,6 +321,10 @@ footer a{/*ajustes de los enlaces del pie de página; color, peso (falseado), el
     .contacto p{/*los textos p de todos los apartados reducen su tamaño de fuente y pasan a ocupar el 80% del vw*/
         font-size: 0.9em;
         width: 80vw;
+    }
+    .avvi{/*la imagen de "sobre mí" reduce su tamaño*/
+        height: 250px;
+        margin: auto;
     }
     .contacto img{/*la imagen de la section "contacto" pasa a ser de menor tamaño*/
         height: 160px;
