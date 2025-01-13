@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.poppins-regular{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.poppins-medium{
+font-family: "Poppins", serif;
+font-weight: 500;
+font-style: normal;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+header{ /*cabecera sticky con enlaces*/
+    position: sticky;
+    top: 0;
+    padding: 10px 40px 5px;
+    background-color: #C9B9E0;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{/*icono del perro fiestas en el header*/
+    height: 70px;
+}
+.cabecera{/*header que incluye perro fiestas, nombre de la web y texto secundario*/
+    display: flex;
+}
+header a{/*texto "Cris Bubastis" que enlaza al inicio*/
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+.texto{/*SOLO texto del header SIN nav (Cris Bubastis + ilustración cute)*/
+    margin-left: 5px;
+}
+header p{/*texto secundario header ("ilustración cute")*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase;
+}
+nav ul{/*elementos del nav*/
+	list-style:none;
+    text-transform: lowercase;
+    font-weight: 500;
+    display: flex;
+    width: 300px;
+    justify-content: flex-end;
+}
+nav a{/*enlaces del nav*/
+	display: block;
+    text-align: end;
+    font-size: 1.2em;
+}
+nav a:hover{/*hover del nav que hace que el texto se ponga en color negro*/
+    color: black;
+}
+nav li{/*hace que los elementos del nav se separen*/
+	flex-grow:1;
+}
+.primero,
+.segundo{/*apartados div del index*/
+    height: 100vh;
+    padding: 30px 40px;
+}
+.contenido,
+.ref{/*divs del cuerpo de about.html y portfolio.html*/
+    padding: 30px 40px;
+}
+.primero{/*primer div del index*/
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url(../img/avvi.jpg);
+}
+.segundo{/*segundo div del index*/
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url(../img/01.jpg);
+}
+.primero,
+.segundo{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.primero a,
+.segundo a{/*texto h2 de los divs del index que enlazan a sus respectivos html*/
+    text-decoration: none;
+    color: #C9B9E0;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+.primero p,
+.segundo p{/*texto de párrafo de los divs del index*/
+    width: 400px;
+}
+.contenido p,
+.ref p{/*cuerpo de texto*/
+    width: 40vw;
+    margin-bottom: 10px;
+}
+.click{/*párrafo aclaratorio de la GALERIA MODAL (portfolio)*/
+    font-style: italic;
+    font-size: 0.8em;
+}
+.avvi{/*imagen del apartado "sobre mí"*/
+    height: 400px;
+    margin-right: 30px;
+    border-radius: 10%;
+}
+.about{/*div de "about.html" que incluye el texto y la foto avvi*/
+    display: flex;
+    justify-content: space-between;
+}
+.link:hover:after{/*hover aplicado en la página index sobre los h2*/
+    color: #C9B9E0;
+	content:" ✿";
+}
+.galeria{/*disposición de la section "galeria" del apartado "portfolio"*/
+    margin: 10px 0;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 19px;
+}
+.galeriaref{/*disposición de la section "galeriaref" del apartado "sobre mí"*/
+    margin: 10px 0;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 15px;
+}
+.galeria a,
+.galeria img,
+.galeriaref img{/*ajuste de enlaces e imágenes de las galerías*/
+    display: block;
+    width: 100%;
+}
+.galeria img,
+.galeriaref img{/*redondeo de esquinas de todas las imágenes incluidas en las galerías*/
+    border-radius: 30px;
+}
+.modal{/*características de la clase "modal"*/
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.modal img{/*tamaño de las imágenes en la clase "modal"*/
+    height: 80vh;
+}
+.visible{/*clase "visible" aplicada desde js a la modal*/
+    display: flex;
+}
+.modal button{/*botón flecha de la modal*/
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 6em;
+    margin: 0 20px;
+}
+.contacto{/*div del apartado "portfolio" con imagen a + texto*/
+    padding: 0 10px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacto img{/*tamaño de imagen del apartado contacto*/
+    height: 200px;
+}
+footer{/*pie de página*/
+    border-top: dotted 4px #C9B9E0;
+    padding: 20px;
+    text-transform: lowercase;
+    color: #C9B9E0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a{/*ajustes de los enlaces del pie de página; color, peso (falseado), eliminación del subrayado por defecto*/
+    text-decoration: none;
+    color: #C9B9E0;
+    font-weight: 600;
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .galeria a{
+        cursor: zoom-in;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .galeria{/*la galería del portfolio muestra 3 imágenes por línea*/
+        grid-template-columns: repeat(3, auto);
+    }
+    .galeria :nth-child(7),
+    .galeria :nth-child(8){/*se eliminan el penúltimo y último elemento de la galería del portfolio*/
+        display: none;
+    }
+    .click{/*se oculta el texto que indica que la galería es modal*/
+        display: none;
+    }
+    .primero h2,
+    .segundo h2{
+        text-shadow: white 0 0 10px;
+    }
+    .contenido p{
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 850px) {
+    .galeria{/*la galería del porfolio muestra 2 elementos por línea*/
+        grid-template-columns: repeat(2, auto);
+        gap: 15px;
+    }
+    .galeriaref{/*la galería de referencias muestra 3 elementos por línea*/
+        grid-template-columns: repeat(3, auto);
+    }
+    .avvi{/*la imagen de "sobre mí" reduce su tamaño*/
+        height: 300px;
+    }
+}
+@media screen and (max-width: 700px) {
+    header{/*el header cambia la disposición para centarse*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cabecera{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header img{/*se deja de mostrar el icono del perro fiestas*/
+        display: none;
+    }
+    header a{/*reducción del tamaño del título*/
+        font-size: 0.8em;
+    }
+    header p{/*se deja de mostrar el texto secundario p*/
+        display: none;
+    }
+    nav{/*centrado del nav*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav li{
+        flex-grow: initial;
+    }
+    nav ul{
+        justify-content: space-between;
+        width: 200px;
+    }
+    nav a{
+        font-size: 1em;
+    }
+    .avvi{/*la imagen de "sobre mí" reduce su tamaño*/
+        height: 350px;
+        margin: auto;
+    }
+    .about{/*el div "about" ahora se muestra como columna, por lo que la imagen avvi se ubica después del texto informativo*/
+        flex-direction: column;
+    }
+    .about p{/*ocupar el 80% del vw*/
+        width: 80vw;
+    }
+    .galeria,
+    .galeriaref{
+        width: 85vw;
+    }
+    .apartados{/*los divs primero y segundo del index se ponen en columna y no en row*/
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        font-size: 0.9em;
+    }
+    .primero{/*el primer div del inicio tiene margen para separarse del segundo*/
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/ref08.jpg);
+        margin-bottom: 30px;
+    }
+    .segundo{
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/08.png);
+    }
+    .primero,
+    .segundo{/*los divs del index tienen altura determinada y esquinas redondeadas*/
+        border-radius: 10%;
+        height: 300px;
+    }
+    .primero p,
+    .segundo p{/*el texto p de los divs del index ocupa el 60% del vw*/
+        width: 60vw;
+    }
+}
+@media screen and (max-width: 500px) {
+    .galeriaref{/*la galería del apartado "sobre mí" muestra 2 elementos por línea*/
+        grid-template-columns: repeat(2, auto);
+    }
+    .galeriaref img:nth-child(odd){/*los elementos impares de la galería dejan de mostrarse para reducir la información mostrada en dispositivos con menor pantalla*/
+        display: none;
+    }
+    .galeria{/*la galería del portfolio muestra sólo 1 imagen por línea en mayor tamaño para mejorar su visibilidad en móvil*/
+        grid-template-columns: repeat(1, auto);
+        gap: 15px;
+    }
+    .about p,
+    .ref p,
+    .contenido p,
+    .contacto p{/*los textos p de todos los apartados reducen su tamaño de fuente y pasan a ocupar el 80% del vw*/
+        font-size: 0.9em;
+        width: 80vw;
+    }
+    .contacto img{/*la imagen de la section "contacto" pasa a ser de menor tamaño*/
+        height: 160px;
+    }
+}
